@@ -16,7 +16,8 @@ var initial = {
 		this.bg.height = game_height;
 
 		//"começar" button
-		this.button1 = this.add.button(450, 270, 'button', this.startAnimation, this);
+		this.button1 = this.add.button(500, 270, 'button', this.startAnimation, this);
+		this.button1.scale.setTo(0.6, 0.6);
 
 		//audio
 		this.music = game.add.audio('music');
@@ -35,6 +36,7 @@ var initial = {
 	},
 
 	startAnimation: function() {
+		this.music.stop();
 		this.state.start('AnimationCanvas');
 	},
 

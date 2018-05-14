@@ -10,5 +10,5 @@ game.state.add('HelpCanvas', help);
 game.state.add('RankingCanvas', ranking);
 game.state.add('PlayCanvas', play);
 
-game.state.start('InitialCanvas');
+game.state.start('MenuCanvas');
 //game.state.start('InitialCanvas');
