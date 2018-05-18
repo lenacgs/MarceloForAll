@@ -2,10 +2,10 @@ var initial = {
 	preload: function() {
 		//carregamento de ficheiros necessários
 		this.game.load.image('background', 'resources/images/bg.png');
-		this.game.load.image('button', 'resources/images/button1.png');
+		this.game.load.image('button', 'resources/images/comecar.png');
 		this.game.load.audio('music', 'resources/songs/Intro.mp3');
-		this.game.load.image('mute', 'resources/images/soundoff.png');
-		this.game.load.image('unmute', 'resources/images/soundon.png');
+		this.game.load.image('mute', 'resources/images/mute.png');
+		this.game.load.image('unmute', 'resources/images/unmute.png');
 		
 	},
 
@@ -17,19 +17,16 @@ var initial = {
 
 		//"começar" button
 		this.button1 = this.add.button(500, 270, 'button', this.startAnimation, this);
-		this.button1.scale.setTo(0.6, 0.6);
 
 		//audio
 		this.music = game.add.audio('music');
 		this.music.play();
 
 		//mute & unmute button
-		this.buttonUnmute = this.add.button(740, 540, 'unmute', this.mute, this);
-		this.buttonUnmute.width = 70;
-		this.buttonUnmute.height = 70;
-		this.buttonMute = this.add.button(740, 540, 'mute', this.unmute, this);
-		this.buttonMute.width = 70;
-		this.buttonMute.height = 70;
+		this.buttonUnmute = this.add.button(760, 560, 'unmute', this.mute, this);
+		this.buttonUnmute.scale.setTo(0.6);
+		this.buttonMute = this.add.button(760, 560, 'mute', this.unmute, this);
+		this.buttonMute.scale.setTo(0.6);
 		this.buttonMute.visible = false;
 
 
